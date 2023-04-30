@@ -20,6 +20,12 @@ A starter project for building GraphQL APIs with Node.js, Typescript, MongoDB, a
  1. Initialize the project:``` npm install typescript-graphql-mongodb-starter```
  2. Install dependencies: ```npm install```
 
+### Setting Up Environment Variables
+
+ create a  .env file in the root folder and add : 
+ ``` DATABASE_URL = 'your_mongodb_url' ```
+ ``` PORT : --- ```
+ 
 ### Running the Application
 
  1. Start the server: npm start
