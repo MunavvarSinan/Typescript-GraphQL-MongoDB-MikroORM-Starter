@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "typescript-graphql-mongodb-starter",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,6 +8,7 @@
     "dev": "nodemon dist/index.js"
   },
   "dependencies": {
+    "@apollo/server": "^4.7.0",
     "@mikro-orm/cli": "^5.2.1",
     "@mikro-orm/core": "^5.3.1",
     "@mikro-orm/migrations": "^5.2.1",
@@ -16,7 +17,6 @@
     "apollo-server-express": "^3.10.2",
     "cors": "^2.8.5",
     "express": "^4.18.1",
-    "express-graphql": "^0.12.0",
     "graphql": "^15.3.0",
     "type-graphql": "^1.0.0-rc.3"
   },

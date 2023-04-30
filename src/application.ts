@@ -6,7 +6,7 @@ import {
   EntityManager,
 } from '@mikro-orm/core';
 import cors from 'cors';
-import { ApolloServer } from 'apollo-server-express';
+import {  ApolloServer } from '@apollo/server';
 import { Server } from 'http';
 import { buildSchema } from 'type-graphql';
 
@@ -32,26 +32,17 @@ export default class Application {
   };
   public init = async (): Promise<void> => {
     this.app = express();
-    this.app.use(
-      cors()
-    );
+    this.app.use(cors());
     try {
       const apolloServer = new ApolloServer({
         schema: await buildSchema({
           resolvers: [HelloResolver],
           validate: false,
         }),
-        context: ({ req, res }) => ({
-          req,
-          res,
-        }),
+
       });
       await apolloServer.start();
-
-      apolloServer.applyMiddleware({
-        app: this.app,
-        cors: false,
-      });
+      
       const port = process.env.PORT || 4000;
       this.server = this.app.listen(port, () => {
         console.log('server started on localhost:4000');
