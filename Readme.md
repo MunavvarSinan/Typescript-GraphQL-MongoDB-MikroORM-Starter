@@ -17,7 +17,7 @@ A starter project for building GraphQL APIs with Node.js, Typescript, MongoDB, a
 
 ### Installation
 
- 1. Clone the repository:``` git clone https://github.com/MunavvarSinan/Typescript-GraphQL-MongoDB-MikroORM-Starter.git```
+ 1. Initialize the project:``` npm install typescript-graphql-mongodb-starter```
  2. Install dependencies: ```npm install```
 
 ### Running the Application
